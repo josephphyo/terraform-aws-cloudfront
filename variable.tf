@@ -16,6 +16,7 @@ variable "bucket_name" {
 
 variable "acl" {
   type = string
+  default = "private"
 }
 
 variable "s3_tag_name" {
