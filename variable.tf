@@ -3,15 +3,15 @@ variable "region" {
 }
 
 variable "access_key" {
-  type = sting
+  type = string
 }
 
 variable "secret_key" {
-  type = sting
+  type = string
 }
 
 variable "bucket_name" {
-  type = sting
+  type = string
 }
 
 variable "acl" {
