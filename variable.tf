@@ -1,19 +1,27 @@
 variable "region" {
-  default = "us-east-1"
+  type = string
+}
+
+variable "access_key" {
+  type = sting
+}
+
+variable "secret_key" {
+  type = sting
 }
 
 variable "bucket_name" {
-  default = "production-campfire-bucket"
+  type = sting
 }
 
 variable "acl" {
-  default = "private"
+  type = string
 }
 
 variable "s3_tag_name" {
-  default = "origin-bucket"
+  type = string
 }
 
 variable "cloudfront_tag_name" {
-  default = "production-cdn"
+  type = string
 }
