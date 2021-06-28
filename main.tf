@@ -1,11 +1,11 @@
 ## S3 Bucket Creation (For Cloudfront Origin)
 
 resource "aws_s3_bucket" "s3originbucket" {
-  bucket = var.s3.bucket_name
-  acl    = var.s3.acl
+  bucket = var.bucket_name
+  acl    = var.acl
 
   tags = {
-    Name = var.s3.tag_name
+    Name = var.s3_tag_name
   }
 }
 
@@ -89,7 +89,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   }
 
   tags = {
-    Environment = var.cloudfront.tag_name
+    Environment = var.cloudfront_tag_name
   }
 
   viewer_certificate {

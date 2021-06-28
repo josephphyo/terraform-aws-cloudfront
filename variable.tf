@@ -1,24 +1,19 @@
-variable "aws" {
-  type = object({
-    access_key = string
-    secret_key = string
-    region     = string
-  })
-  description = "The AWS credential and default Tags"
+variable "region" {
+  default = "us-east-1"
 }
 
-variable "s3" {
-  type = object({
-    bucket_name = string
-    acl         = string
-    tag_name    = string
-  })
-  description = "S3 bucket creation variable"
+variable "bucket_name" {
+  default = "production-campfire-bucket"
 }
 
-variable "cloudfront" {
-  type = object({
-    tag_name = string
-  })
-  description = "Cloudfront creationg variable"
+variable "acl" {
+  default = "private"
+}
+
+variable "s3_tag_name" {
+  default = "origin-bucket"
+}
+
+variable "cloudfront_tag_name" {
+  default = "production-cdn"
 }
