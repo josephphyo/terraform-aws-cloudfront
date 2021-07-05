@@ -1,4 +1,22 @@
-## Requirements
+## AWS CloudFront with S3 Origin Terraform module
+#### Terraform module which creates CloudFront with S3 Origin resources on AWS.
+
+##### Usage
+
+```
+module "cloudfront" {
+  source  = "josephphyo/cloudfront/aws"
+  version = "0.1.7"
+
+  region = "us-east-1"
+  acl = "private"
+  bucket_name = "regional-origin-bucket-3544"
+  s3_tag_name = "regional-origin-bucket"
+  cloudfront_tag_name = "regional-cdn"
+}
+```
+
+##### Requirements
 
 | Name | Version |
 |------|---------|
@@ -27,13 +45,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | n/a | `string` | n/a | yes |
 | <a name="input_acl"></a> [acl](#input\_acl) | n/a | `string` | `"private"` | no |
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | n/a | `string` | n/a | yes |
 | <a name="input_cloudfront_tag_name"></a> [cloudfront\_tag\_name](#input\_cloudfront\_tag\_name) | n/a | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | n/a | yes |
 | <a name="input_s3_tag_name"></a> [s3\_tag\_name](#input\_s3\_tag\_name) | n/a | `string` | n/a | yes |
-| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | n/a | `string` | n/a | yes |
 
 ## Outputs
 
